@@ -9,11 +9,16 @@ const reducer = (state = initialState, action) => {
         case actionTypes.ADD_ITEM:
             const newItem = {
                 id: Math.random(),
-                item: action.personData.item,
+                name: action.name,
             }
             return {
                 ...state,
                 items: state.items.concat(newItem)
+            }
+        case actionTypes.REMOVE_ITEM:
+            return {
+                ...state,
+                items: state.items.filter(item => item.id !== action.itemId)
             }
     }
     return state;

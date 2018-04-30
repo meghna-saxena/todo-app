@@ -3,19 +3,18 @@ import './AddItem.css'
 
 class AddItem extends Component {
     state = {
-        item: ""
+        name: ""
     }
 
     inputChangedHandler = (event) => {
-        this.setState({ item: event.target.value })
+        this.setState({ name: event.target.value })
     }
 
     render() {
         return (
             <div className="add-item">
-                <input type="text" placeholder="Buy groceries.." onChange={this.inputChangedHandler} value={this.state.item} />
-                <button className="btn-item" onClick={() => this.props.itemAdded(this.state.item)}>Add Task</button>
-                {/* {this.state.item} */}
+                <input type="text" placeholder="Buy groceries.." onChange={this.inputChangedHandler} value={this.state.name} />
+                <button className="btn-item" onClick={() => this.props.itemAdded(this.state.name)}>Add Task</button>
             </div>
         );
     }
