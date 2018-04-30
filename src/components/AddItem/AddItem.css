@@ -1,0 +1,37 @@
+.add-item {
+    margin-top: 50px;
+}
+
+input[type=text] {
+    background-color: white;
+    height: 30px;
+    width: 20%;
+    font-size: 14px;
+    padding: 20px 30px;
+    margin: 40px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #1abc9c;
+}
+
+.btn-item {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #1abc9c;
+    color: #fff;
+    border: 2px solid #1edab5;
+    border-radius: 25px;
+}
+
+.btn-item:hover {
+    background-color: #eafcf8;
+    color: #1edab5;
+}

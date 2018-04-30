@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
+import './AddItem.css'
 
 class AddItem extends Component {
     state = {
-        items: ""
+        item: ""
+    }
+
+    inputChangedHandler = (event) => {
+        this.setState({ item: event.target.value })
     }
 
     render() {
         return (
-            <div>
-                <input type="text" placeholder="Buy groceries.." onChange={this.inputChangedHandler} value={this.state.items} />
-                <button>Add Task</button>
+            <div className="add-item">
+                <input type="text" placeholder="Buy groceries.." onChange={this.inputChangedHandler} value={this.state.item} />
+                <button className="btn-item">Add Task</button>
+                {this.state.item}
             </div>
         );
     }
