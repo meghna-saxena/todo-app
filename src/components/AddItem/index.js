@@ -14,8 +14,8 @@ class AddItem extends Component {
         return (
             <div className="add-item">
                 <input type="text" placeholder="Buy groceries.." onChange={this.inputChangedHandler} value={this.state.item} />
-                <button className="btn-item">Add Task</button>
-                {this.state.item}
+                <button className="btn-item" onClick={() => this.props.itemAdded(this.state.item)}>Add Task</button>
+                {/* {this.state.item} */}
             </div>
         );
     }
