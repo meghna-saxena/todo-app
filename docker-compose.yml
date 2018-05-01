@@ -1,0 +1,26 @@
+version: '3.5'
+
+services:
+  todo-app:
+    container_name: todo-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=development
+
+  first-docker-todo-app:
+    container_name: first-docker-todo-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3001:3000'
+    environment:
+      - NODE_ENV=development
+    # Use the following to mount the directories and change the name to `first-docker-todo-app`
+    volumes:
+      - '.:/usr/src/app'
+      - '/usr/src/app/node_modules'
